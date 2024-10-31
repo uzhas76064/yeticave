@@ -37,5 +37,9 @@ create table bets (
     user_id int,
     lot_id int,
     foreign key (user_id) references users(id),
-    foreign key (lot_id) references bets(id)
+    foreign key (lot_id) references lots(id)
 );
+
+create index id on lots(id);
+
+
