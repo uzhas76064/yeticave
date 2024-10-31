@@ -22,15 +22,15 @@
                 <img src="<?=htmlspecialchars($item["image"])?>" width="350" height="260" alt="">
             </div>
             <div class="lot__info">
-                <span class="lot__category"><?=htmlspecialchars($item["category"])?></span>
+                <span class="lot__category"><?=htmlspecialchars($item["name"])?></span>
                 <h3 class="lot__title"><a class="text-link" href="pages/lot.html"><?=htmlspecialchars($item["title"])?></a></h3>
                 <div class="lot__state">
                     <div class="lot__rate">
                         <span class="lot__amount">Стартовая цена</span>
-                        <span class="lot__cost"><?=format_num(htmlspecialchars($item["price"]))?><b class="rub">р</b></span>
+                        <span class="lot__cost"><?=format_num(htmlspecialchars($item["start_price"]))?><b class="rub">р</b></span>
                     </div>
-                    <div class="lot__timer timer <?= is_less_than_hour($item["rest_time"]) ? 'timer--finishing' : '' ?>">
-                        <?= get_date_range($item["rest_time"]) ?>
+                    <div class="lot__timer timer">
+                        <?= get_date_range($item['start_date']) ?>
                     </div>
 
                 </div>

@@ -2,9 +2,7 @@
 
 require_once("helpers.php");
 require_once("utils.php");
-require_once("data.php");
-
-echo get_date_range("2024-10-19");
+require_once("database.php");
 
 $page_content = include_template("main.php", [
     "categories" => $categories,
